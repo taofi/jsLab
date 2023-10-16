@@ -27,7 +27,7 @@ function sumCube(n){
 
 console.log(sumCube(3));
 
-function average(array){
+let average = function (array){
     let sum = 0;
     array.forEach(element => {
         sum += element;
@@ -47,7 +47,6 @@ function reverseEng(str){
 }
 
 console.log(reverseEng("abcdef34УК"));
-
 function repeatStr(n, str){
     let newStr = '';
     while(n > 0){

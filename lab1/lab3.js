@@ -1,13 +1,12 @@
 let arr1 = [1, [1, 2, [3, 4]], [2, 4]];
 let arr2 = [4, [2, 3, [3, 4]], [1, 4]];
 function flatten(arr){
-return arr.reduce(function(newArr, current){
+return arr.reduce((newArr, current) => {
     //console.log(current);
     return newArr.concat(Array.isArray(current) ? flatten(current): current);
 }, []);
 }
 console.log(flatten([arr1, arr2]));
-
 
 function calculate(arr){
     return arr.reduce(function(sum, current){
@@ -15,7 +14,6 @@ function calculate(arr){
     }, 0);
 }
 console.log(calculate(arr1));
-
 
 let arrStudents = [
     {
@@ -78,7 +76,7 @@ let total2 = getStrCode("ABC").replace('7','1');
 console.log(parseInt(total1) - parseInt(total2));
 
 function mergeObjects(...objects) {
-    return Object.assign({}, ...objects);
+    return Object.assign(...objects);
 }
 
 const obj1 = {a: 1, b: 2};
