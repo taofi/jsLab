@@ -1,0 +1,11 @@
+﻿  mask.cpp
+D:\projects\csis\mask\mask\mask.cpp(25,16): warning C4244: =: преобразование "double" в "ul", возможна потеря данных
+D:\projects\csis\mask\mask\mask.cpp(26,15): warning C4244: =: преобразование "double" в "ul", возможна потеря данных
+D:\projects\csis\mask\mask\mask.cpp(38,16): warning C4244: =: преобразование "double" в "ul", возможна потеря данных
+D:\projects\csis\mask\mask\mask.cpp(39,15): warning C4244: =: преобразование "double" в "ul", возможна потеря данных
+D:\projects\csis\mask\mask\mask.cpp(51,16): warning C4244: =: преобразование "double" в "ul", возможна потеря данных
+D:\projects\csis\mask\mask\mask.cpp(52,15): warning C4244: =: преобразование "double" в "ul", возможна потеря данных
+D:\projects\csis\mask\mask\mask.cpp(130,21): warning C4101: subnet: неиспользованная локальная переменная
+D:\projects\csis\mask\mask\mask.cpp(130,29): warning C4101: broadcast: неиспользованная локальная переменная
+D:\projects\csis\mask\mask\mask.cpp(130,15): warning C4101: host: неиспользованная локальная переменная
+  mask.vcxproj -> D:\projects\csis\mask\x64\Debug\mask.exe
