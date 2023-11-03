@@ -7,25 +7,13 @@ const products = new Set();
   products.delete("Товар 1");
   console.log("Количество товаров в списке:", products.size);
   
-
-class Student {
-  constructor(number, group, fullName) {
-    this.number = number;
-    this.group = group;
-    this.fullName = fullName;
-  }
-}
-
-
-
-
 class StudentList{
     constructor() {
         this.students = new Set();
     }
     add(student){
         for (const item of this.students) {
-            if (item.number === student.number) {
+            if (item.number == student.number) {
               return;
             }
         }
@@ -33,14 +21,14 @@ class StudentList{
     }
     removeStudent(number) {
         this.students.forEach((student) => {
-          if (student.number === number) {
+          if (student.number == number) {
             this.students.delete(student);
             return;
           }
         });
     }
     filterByGroup(group) {
-       return [...this.students].filter((student) => student.group === group);
+       return [...this.students].filter((student) => student.group == group);
     }
     sortByNumber() {
         this.students = new Set([...this.students].sort((a, b) => a.number - b.number));
@@ -48,16 +36,17 @@ class StudentList{
 }
 
 let studentsList = new StudentList();
-
-studentsList.add(new Student(3, "5", ""));
-studentsList.add(new Student(100, "4", ""));
-studentsList.add(new Student(1, "5", ""));
-studentsList.add(new Student(195, "5", ""));
+const obj1 = {number: 3, group:5, name:"Gleb"};
+const obj2 = {number: 6, group:4, name:"Oleg"};
+const obj3 = {number: 195, group:2, name:"Katy"};
+studentsList.add(obj1);
+studentsList.add(obj2);
+studentsList.add(obj3);
+studentsList.add(obj1);
 studentsList.sortByNumber();
+//studentsList.removeStudent(195);
 console.log(studentsList.students);
-studentsList.removeStudent(195);
-console.log(studentsList.students);
-console.log(studentsList.filterByGroup("5"));
+console.log(studentsList.filterByGroup(5));
 
 
 class productMap{
@@ -72,7 +61,7 @@ class productMap{
     }
     removeByName(name) {
         for (const [id, product] of this.products) {
-          if (product.name === name) {
+          if (product.name == name) {
             this.products.delete(id);
           }
         }
@@ -98,7 +87,7 @@ class productMap{
     }
     totalPrice(){
         let cost = 0;
-        for (const [id, product] of this.products) {
+        for (const [, product] of this.products) {
             cost += product.price;
         }
         return cost;

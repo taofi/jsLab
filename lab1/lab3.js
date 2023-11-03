@@ -52,7 +52,12 @@ let arrStudents = [
         groupId: 3,
     }
 ]
-
+arrStudents.push({
+    name: "kirill",
+    age: 19,
+    groupId: 5,
+});
+arrStudents[3].age = 20;
 let newObj = arrStudents.reduce((objStudents, current) => {
     if(current.age >= 17){
         if(!objStudents[current.groupId]){
@@ -73,17 +78,18 @@ function getStrCode(str){
 let total1 = getStrCode("ABC");
 let total2 = getStrCode("ABC").replace('7','1');
 
-console.log(parseInt(total1) - parseInt(total2));
+console.log(total1 - total2);
 
 function mergeObjects(...objects) {
     return Object.assign(...objects);
 }
 
 const obj1 = {a: 1, b: 2};
-const obj2 = {c: 3, d: 4};
+const obj2 = {};
 const obj3 = {e: 5};
-
-console.log(mergeObjects(obj1, obj2, obj3)); 
+let objNew = mergeObjects(obj2, obj1);
+console.log(obj2);
+console.log(objNew); 
 
 function builtPyramid(n){
     let pyramidArr = [];
