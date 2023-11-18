@@ -74,3 +74,12 @@ function getUserDirection() {
 }
 
 getUserDirection();
+
+
+var xVar= 9;
+for (let key in window) {
+    console.log(key, window[key]);
+}
+
+window.xVar = 33;
+console.log(xVar);
