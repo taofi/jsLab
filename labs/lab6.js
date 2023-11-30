@@ -14,7 +14,7 @@ console.log(`${admin.admin}, ${admin.name}, ${admin.age}`);
 let store ={
     state: {
         profilePage:{
-            posts:[
+            posts:[//3
                 {id: 1, massage: 'Hi', likesCount: 12},
                 {id: 2, message: 'By', likesCount: 1},
             ],
@@ -44,6 +44,7 @@ posts.forEach(element => {
 });
 //console.log(messages);
 console.log(dialogs.filter((dialog) => dialog.id % 2 == 0));
+
 let newMessages = messages.map(function(m){
     return m = {id: m.id, message: "Hello user"};
 })

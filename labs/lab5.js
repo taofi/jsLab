@@ -4,6 +4,7 @@ function makeCounter(){
         return currentCount ++; // Хранит ссылку на  лексическое окружение makeCounter  
     }
 }
+
 let counter = makeCounter();
 console.log(counter());
 console.log(counter());
